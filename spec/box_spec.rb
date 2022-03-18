@@ -5,7 +5,7 @@ describe 'A box' do
   describe 'attributes' do
     it 'has tiles' do
       box = Box.new
-      expect(box.tiles).to be_kind_of(Array)
+      expect(box.tiles).to_not eq(nil)
     end
   end
 
