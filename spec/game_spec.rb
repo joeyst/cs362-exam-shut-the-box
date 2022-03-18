@@ -8,7 +8,8 @@ describe 'A game' do
       expect(game.box).to be_kind_of(Box)
     end
     it 'has dice' do
-      skip
+      game = Game.new
+      expect(game.dice).to be_kind_of(Array)
     end
   end
 
