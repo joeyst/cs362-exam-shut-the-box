@@ -18,7 +18,8 @@ describe 'A box' do
     end
     context 'with a specific array of tiles' do
       it 'will retain the tiles passed its constructor' do
-        skip
+        box = Box.new(TileSet.generate(10))
+        expect(box.tiles).to be_kind_of(Array)
       end
     end
   end
