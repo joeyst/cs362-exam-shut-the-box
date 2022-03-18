@@ -55,7 +55,8 @@ describe 'A box' do
       expect(box.shut?).to be_truthy
     end
     it 'is false when there are tiles remaining' do
-      skip
+      box = Box.new(TileSet.generate(1))
+      expect(box.shut?).to be_falsy
     end
   end
 
