@@ -13,12 +13,11 @@ describe 'A command' do
     context "when the command text is Command::GIVE_UP" do
       it 'returns true' do
         give_up_command = Command.new('g')
-        expect(give_up_command).to be_truthy
+        expect(give_up_command.give_up?).to be_truthy
       end
     end
     context "when the command is not Command::GIVE_UP" do
       it 'returns false' do
-        skip
       end
     end
   end
