@@ -72,6 +72,9 @@ describe 'A box' do
   describe '#flip' do
     it 'flips each tile whose value matches any of the tile values it receives' do
       skip
+      box = Box.new(TileSet.generate(2))
+      box.flip([1])
+      expect(box[0].up?).to be_falsy
     end
     it 'does not flip any tile whose value does not match any of the tile values it receives' do
       skip
