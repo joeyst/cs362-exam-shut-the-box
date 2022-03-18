@@ -77,7 +77,9 @@ describe 'A box' do
       expect(box[0].up?).to be_falsy
     end
     it 'does not flip any tile whose value does not match any of the tile values it receives' do
-      skip
+      box = Box.new(TileSet.generate(1))
+      box.flip([2])
+      expect(box.shut?).to be_falsy
     end
   end
 
