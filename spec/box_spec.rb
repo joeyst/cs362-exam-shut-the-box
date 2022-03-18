@@ -26,7 +26,8 @@ describe 'A box' do
 
   describe '#tiles_remaining?' do
     it 'returns true when at least one tile is up' do
-      skip
+      box = Box.new(TileSet.generate(1))
+      expect(box.tiles_remaining?).to be_truthy
     end
     it 'returns false when none of the tiles are up' do
       skip
