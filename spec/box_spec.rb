@@ -5,14 +5,14 @@ describe 'A box' do
   describe 'attributes' do
     it 'has tiles' do
       box = Box.new
-      expect(box.tiles).to be_truthy
+      expect(box.tiles).to be_kind_of(Array)
     end
   end
 
   describe 'creation' do
     context 'by default' do
       it 'will initialize an array of tiles' do
-        skip
+        
       end
     end
     context 'with a specific array of tiles' do
