@@ -50,7 +50,9 @@ describe 'A box' do
 
   describe '#shut?' do
     it 'is true when there are no tiles remaining' do
-      skip
+      box = Box.new(TileSet.generate(1))
+      box.flip([1])
+      expect(box.shut?).to be_truthy
     end
     it 'is false when there are tiles remaining' do
       skip
