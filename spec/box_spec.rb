@@ -62,7 +62,10 @@ describe 'A box' do
 
   describe '#total_value_of_remaining_tiles' do
     it 'is the sum of the values of all the tiles that are still up' do
-      skip
+      box = Box.new(TileSet.generate(2))
+      expect(box.total_value_of_remaining_tiles).to eq(3)
+      box.flip([1])
+      expect(box.total_value_of_remaining_tiles).to eq(2)
     end
   end
 
