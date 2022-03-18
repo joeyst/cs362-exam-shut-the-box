@@ -37,7 +37,8 @@ describe 'A command' do
     end
     context "when the command is not a digit set" do
       it 'returns false' do
-        skip
+        command_with_digit_set = Command.new('123h')
+        expect(command_with_digit_set.digit_set?).to be_falsy
       end
     end
   end
