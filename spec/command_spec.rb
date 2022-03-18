@@ -18,6 +18,8 @@ describe 'A command' do
     end
     context "when the command is not Command::GIVE_UP" do
       it 'returns false' do
+        give_up_command = Command.new('h')
+        expect(give_up_command.give_up?).to be_falsy
       end
     end
   end
