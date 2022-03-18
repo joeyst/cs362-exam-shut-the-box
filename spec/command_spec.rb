@@ -4,7 +4,8 @@ describe 'A command' do
 
   describe 'attributes' do
     it 'has text' do
-      skip
+      command = Command.new('Fake Text')
+      expect(command.text).to eq('Fake Text')
     end
   end
 
