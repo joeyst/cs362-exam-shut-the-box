@@ -89,7 +89,8 @@ describe 'A box' do
     # The string representation is [1][ ][3][4].
     it "is each tile value in brackets with blanks for tiles that are down" do
       box = Box.new(TileSet.generate(4))
-      expect(box.to_s).to eq([1][ ][3][4])
+      box.flip([2])
+      expect(box.to_s).to eq('[1][ ][3][4]')
     end
   end
 end
